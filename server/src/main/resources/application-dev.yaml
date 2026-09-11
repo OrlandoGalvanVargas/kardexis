@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    show-sql: true
+
+logging:
+  level:
+    com.kardexis: DEBUG
+    org.springframework.security: INFO
+    org.hibernate.SQL: DEBUG
