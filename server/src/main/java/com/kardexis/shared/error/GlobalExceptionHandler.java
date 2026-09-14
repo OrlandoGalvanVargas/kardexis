@@ -55,6 +55,11 @@ public class GlobalExceptionHandler {
         pd.setProperty("errors", errors);
         return pd;
     }
+    
+    @ExceptionHandler(InvalidCredentialsException.class)
+    public ProblemDetail handleInvalidCredentials(InvalidCredentialsException ex) {
+        return build(HttpStatus.UNAUTHORIZED, "Authentication failed", ex.getMessage());
+    }
 
     @ExceptionHandler(Exception.class)
     public ProblemDetail handleUnexpected(Exception ex) {
