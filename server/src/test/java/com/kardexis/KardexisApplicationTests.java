@@ -1,13 +1,11 @@
 package com.kardexis;
 
+import com.kardexis.support.PostgresTestContainerBase;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class KardexisApplicationTests {
+class KardexisApplicationTests extends PostgresTestContainerBase {
 
-	@Test
-	void contextLoads() {
-	}
-
+    @Test
+    void contextLoads() {
+    }
 }
